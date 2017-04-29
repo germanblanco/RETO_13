@@ -30,3 +30,14 @@ source .bashrc
 La dirección de descarga de Spark se obtiene de https://spark.apache.org/downloads.html
 
 ## Creación de datos de prueba
+
+Ejemplo de instrucciones para crear datos de prueba:
+<pre>
+<code>
+val mydata = List(Row(1, "2019-07-09"), Row(2, "2019-07-08"))
+val myrdd = sc.parallelize(data)
+val myschema =  StructType(StructField("k", IntegerType, true) :: StructField("v", StringType, false) :: Nil)
+val mydf = sc.createDataFrame(myrdd, myschema)
+</code>
+</pre>
+
