@@ -43,3 +43,16 @@ Se puede ver el contenido de mydf con:
 mydf.foreach(x => println("col 1: " + x.get(0) + " col 2: " + x.get(1)))
 </code></pre>
 
+## Paso 1. Scala
+
+### Lenguajes funcionales
+### Maneras de recorrer una colección
+
+### Ejercicio
+
+Hallar la suma de una lista sin usar var
+
+<pre><code>
+val list = 1 :: 2 :: 3 :: Nil
+?
+</code></pre>
