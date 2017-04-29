@@ -34,6 +34,8 @@ La dirección de descarga de Spark se obtiene de https://spark.apache.org/downlo
 Ejemplo de instrucciones para crear datos de prueba:
 <pre>
 <code>
+import org.apache.spark.sql.types.{StructType, StructField, StringType, IntegerType}
+import org.apache.spark.sql.Row
 val mydata = List(Row(1, "2019-07-09"), Row(2, "2019-07-08"))
 val myrdd = sc.parallelize(data)
 val myschema =  StructType(StructField("k", IntegerType, true) :: StructField("v", StringType, false) :: Nil)
