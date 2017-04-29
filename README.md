@@ -39,7 +39,7 @@ import org.apache.spark.sql.Row
 val mydata = List(Row(1, "2019-07-09"), Row(2, "2019-07-08"))
 val myrdd = sc.parallelize(mydata)
 val myschema =  StructType(StructField("k", IntegerType, true) :: StructField("v", StringType, false) :: Nil)
-val mydf = sc.createDataFrame(myrdd, myschema)
+val mydf = sqlContext.createDataFrame(myrdd, myschema)
 </code>
 </pre>
 
