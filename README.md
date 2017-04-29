@@ -37,7 +37,7 @@ Ejemplo de instrucciones para crear datos de prueba:
 import org.apache.spark.sql.types.{StructType, StructField, StringType, IntegerType}
 import org.apache.spark.sql.Row
 val mydata = List(Row(1, "2019-07-09"), Row(2, "2019-07-08"))
-val myrdd = sc.parallelize(data)
+val myrdd = sc.parallelize(mydata)
 val myschema =  StructType(StructField("k", IntegerType, true) :: StructField("v", StringType, false) :: Nil)
 val mydf = sc.createDataFrame(myrdd, myschema)
 </code>
